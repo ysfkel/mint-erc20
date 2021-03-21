@@ -28,9 +28,7 @@ contract L1MinTer {
 
          bytes memory messageData = abi.encodeWithSelector(imintTokens.mintTokens.selector,_acount, _amount);
 
-         iAbs_BaseCrossDomainMessenger _crossDomainMessender = iAbs_BaseCrossDomainMessenger(crossDomainMessengerAddress);
-         
-         _crossDomainMessender.sendMessage(_target,
+          iAbs_BaseCrossDomainMessenger(crossDomainMessengerAddress).sendMessage(_target,
           messageData, 
           900000);
 
