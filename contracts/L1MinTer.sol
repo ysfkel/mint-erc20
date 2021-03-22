@@ -11,10 +11,10 @@ interface IMintTokens{
 
 contract L1MinTer {
 
-    address crossDomainMessengerAddress;
+    address crossDomainMessengerAddress = 0x6f78cde001182d5DCBc63D3C4b8051f2059E79D8; // this is public testnet address
     
-    constructor(address _crossDomainMessengerAddress) {
-        crossDomainMessengerAddress = _crossDomainMessengerAddress; 
+    constructor() {
+
     } 
 
     event TokensMinted(address,uint256);
