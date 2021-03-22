@@ -23,7 +23,8 @@ let mint = async () => {
 }
 
 
-async function watch() {
+
+async function watch(L1Hash) {
 
   try{
       
