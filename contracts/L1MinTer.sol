@@ -11,7 +11,7 @@ interface IMintTokens{
 
 contract L1MinTer {
 
-    address crossDomainMessengerAddress = 0x6f78cde001182d5DCBc63D3C4b8051f2059E79D8; // this is public testnet address
+   // address crossDomainMessengerAddress = 0x6f78cde001182d5DCBc63D3C4b8051f2059E79D8; // this is public testnet address
     
     constructor() {
 
@@ -28,7 +28,7 @@ contract L1MinTer {
 
          bytes memory messageData = abi.encodeWithSelector(imintTokens.mintTokens.selector,_acount, _amount);
 
-          iAbs_BaseCrossDomainMessenger(crossDomainMessengerAddress).sendMessage(_target,
+          iAbs_BaseCrossDomainMessenger(0x4200000000000000000000000000000000000007).sendMessage(_target,
           messageData, 
           900000);
 
